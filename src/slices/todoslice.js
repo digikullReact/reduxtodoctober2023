@@ -13,6 +13,13 @@ const todoSlice=createSlice({
            state.list.push(action.payload);
 
         },
+
+        deletetodo:(state,action)=>{
+            debugger;
+            console.log(state.list)
+            state.list=state.list.filter(ele=>ele.id!=action.payload.id);
+ 
+         },
         changeInputState:(state,action)=>{
              state.inputState=action.payload;
         }
@@ -27,4 +34,4 @@ export default todoSlice.reducer;
 
 
 // we will export the actions
-export const {addtodo,changeInputState} =todoSlice.actions
+export const {addtodo,changeInputState,deletetodo} =todoSlice.actions
