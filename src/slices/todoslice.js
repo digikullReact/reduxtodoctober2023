@@ -15,9 +15,8 @@ const todoSlice=createSlice({
         },
 
         deletetodo:(state,action)=>{
-            debugger;
             console.log(state.list)
-            state.list=state.list.filter(ele=>ele.id!=action.payload.id);
+            state.list=state.list.filter(ele=>ele.id!=action.payload);
  
          },
         changeInputState:(state,action)=>{
